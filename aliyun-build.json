@@ -1,0 +1,18 @@
+[
+  {
+    "id": "to_slack",
+    "execute-command": "/app/send-to-slack.sh",
+    "command-working-directory": "/app",
+    "pass-arguments-to-command":
+    [
+      {
+        "source": "payload",
+        "name": "repository.name"
+      },
+      {
+        "source": "payload",
+        "name": "push_data.pushed_at"
+      }
+    ]
+  }
+]
