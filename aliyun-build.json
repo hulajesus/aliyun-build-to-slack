@@ -11,6 +11,10 @@
       },
       {
         "source": "payload",
+        "name": "push_data.tag"
+      },
+      {
+        "source": "payload",
         "name": "push_data.pushed_at"
       }
     ]
