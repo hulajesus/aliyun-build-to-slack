@@ -1,0 +1,5 @@
+pipeline:
+  docker:
+    image: plugins/docker
+    dockerfile: Dockerfile
+    auto_tag: true
