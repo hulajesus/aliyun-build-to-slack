@@ -1,6 +1,6 @@
 [
   {
-    "id": "to_slack",
+    "id": "to_slack1",
     "execute-command": "/app/send-to-slack.sh",
     "command-working-directory": "/app",
     "pass-arguments-to-command":

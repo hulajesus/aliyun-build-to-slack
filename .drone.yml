@@ -1,0 +1,17 @@
+pipeline:
+  build:
+    image: plugins/docker
+    registry: registry.cn-hangzhou.aliyuncs.com
+    repo: registry.cn-hangzhou.aliyuncs.com/imtoken/test
+    secrets: [ docker_username, docker_password ]
+    insecure: false
+  deploy:
+    image: quay.io/honestbee/drone-kubernetes
+    deployment: test1
+    repo: registry.cn-hangzhou.aliyuncs.com/imtoken/test
+    container: test1
+    namespace: test
+    secrets: [ kubernetes_server, kubernetes_cert, kubernetes_token ]
+    tag:
+      - latest
+
